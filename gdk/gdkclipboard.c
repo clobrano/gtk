@@ -112,6 +112,14 @@ gdk_clipboard_finalize (GObject *object)
   G_OBJECT_CLASS (gdk_clipboard_parent_class)->finalize (object);
 }
 
+static GInputStream *
+gdk_clipboard_real_read (GdkClipboard *clipboard,
+                         const char   *mime_type)
+{
+  /* whoop whooop */
+  return g_memory_input_stream_new ();
+}
+
 static void
 gdk_clipboard_class_init (GdkClipboardClass *class)
 {
@@ -120,6 +128,8 @@ gdk_clipboard_class_init (GdkClipboardClass *class)
   object_class->get_property = gdk_clipboard_get_property;
   object_class->set_property = gdk_clipboard_set_property;
   object_class->finalize = gdk_clipboard_finalize;
+
+  class->read = gdk_clipboard_real_read;
 
   /**
    * GdkClipboard:display:
@@ -224,6 +234,19 @@ gdk_clipboard_get_formats (GdkClipboard *clipboard)
   g_return_val_if_fail (GDK_IS_CLIPBOARD (clipboard), NULL);
 
   return priv->formats;
+}
+
+GInputStream *
+gdk_clipboard_read (GdkClipboard *clipboard,
+                    const char   *mime_type)
+{
+  GdkClipboardPrivate *priv = gdk_clipboard_get_instance_private (clipboard);
+
+  g_return_val_if_fail (GDK_IS_CLIPBOARD (clipboard), NULL);
+  g_return_val_if_fail (mime_type != NULL, NULL);
+  g_return_val_if_fail (gdk_content_formats_contain_mime_type (priv->formats, mime_type), NULL);
+
+  return GDK_CLIPBOARD_GET_CLASS (clipboard)->read (clipboard, mime_type);
 }
 
 GdkClipboard *
