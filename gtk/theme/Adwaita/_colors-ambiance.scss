@@ -1,0 +1,132 @@
+/*default color scheme */
+$ambiance_bg_color         : #f2f1f0;
+$ambiance_fg_color         : #4c4c4c;
+$ambiance_base_color       : #ffffff;
+$ambiance_text_color       : #3C3C3C;
+$ambiance_selected_bg_color: #f07746;
+$ambiance_selected_fg_color: #ffffff;
+$ambiance_tooltip_bg_color : #000000;
+$ambiance_tooltip_fg_color : #ffffff;
+
+$ambiance_active_shadow_color: black;
+$ambiance_inactive_shadow_color: alpha($ambiance_active_shadow_color, 30%);
+
+/** GTK NAMED COLORS: these might be reused by apps, keep in sync with Adwaita **/
+/*
+widget text/foreground color */
+$ambiance_theme_fg_color: $ambiance_fg_color;
+/*
+text color for entries, views and content in general */
+$ambiance_theme_text_color: $ambiance_fg_color;
+/*
+widget base background color */
+$ambiance_theme_bg_color: $ambiance_bg_color;
+/*
+text widgets and the like base background color */
+$ambiance_theme_base_color: $ambiance_base_color;
+/*
+base background color of selections */
+$ambiance_theme_selected_bg_color: $ambiance_selected_bg_color;
+/*
+text/foreground color of selections */
+$ambiance_theme_selected_fg_color: $ambiance_selected_fg_color;
+/*
+base background color of insensitive widgets */
+$ambiance_insensitive_bg_color: shade($ambiance_bg_color, 0.95);
+/*
+text foreground color of insensitive widgets */
+$ambiance_insensitive_fg_color: shade($ambiance_bg_color, 0.6);
+/*
+insensitive text widgets and the like base background color */
+$ambiance_insensitive_base_color: $theme_base_color;
+/*
+widget text/foreground color on backdrop windows */
+$ambiance_theme_unfocused_fg_color: $ambiance_backdrop_fg_color;
+/*
+text color for entries, views and content in general on backdrop windows */
+$ambiance_theme_unfocused_text_color: $ambiance_backdrop_text_color;
+/*
+widget base background color on backdrop windows */
+$ambiance_theme_unfocused_bg_color: $ambiance_theme_bg_color;
+/*
+text widgets and the like base background color on backdrop windows */
+$ambiance_theme_unfocused_base_color: $theme_base_color;
+/*
+base background color of selections on backdrop windows */
+$ambiance_theme_unfocused_selected_bg_color: $ambiance_backdrop_selected_bg_color;
+/*
+text/foreground color of selections on backdrop windows */
+$ambiance_theme_unfocused_selected_fg_color: $ambiance_backdrop_selected_fg_color;
+/*
+insensitive color on backdrop windows*/
+$ambiance_unfocused_insensitive_color: $insensitive_fg_color;
+/*
+widgets main borders color */
+$ambiance_borders: shade($ambiance_bg_color, 0.82);
+/*
+widgets main borders color on backdrop windows */
+$ambiance_unfocused_borders: $borders;
+/*
+these are pretty self explanatory */
+$ambiance_warning_color: #eca918;
+$ambiance_error_color: #df382c;
+$ambiance_success_color: #38b44a;
+
+/** Default theme colors definition end **/
+
+/* misc colors used by gtk+
+ *
+ * Gtk doesn't currently expand color variables for style properties. Thus,
+ * gtk-widgets.css uses literal color names, but includes a comment containing
+ * the name of the variable. Please remember to change values there as well
+ * when changing one of the variables below.
+ */
+$ambiance_define-color: info_fg_color rgb (181, 171, 156);
+$ambiance_define-color: info_bg_color rgb (252, 252, 189);
+$ambiance_define-color: warning_fg_color rgb (173, 120, 41);
+$ambiance_define-color: warning_bg_color rgb (250, 173, 61);
+$ambiance_define-color: question_fg_color rgb (97, 122, 214);
+$ambiance_define-color: question_bg_color rgb (138, 173, 212);
+$ambiance_define-color: error_fg_color rgb (235, 235, 235);
+$ambiance_define-color: error_bg_color rgb (223, 56, 44);
+$ambiance_define-color: link_color $ambiance_selected_bg_color;
+
+/* theme common colors */
+$ambiance_define-color: button_text_shadow alpha(white, 0.4);
+$ambiance_define-color: button_bg_color shade ($ambiance_bg_color, 1.02); /*shade (#cdcdcd, 1.08);*/
+$ambiance_define-color: notebook_button_bg_color shade ($ambiance_bg_color, 1.02);
+$ambiance_define-color: button_insensitive_bg_color mix ($ambiance_button_bg_color, $ambiance_bg_color, 0.6);
+$ambiance_define-color: dark_bg_color #3c3b37;
+$ambiance_define-color: dark_fg_color #dfdbd2;
+
+$ambiance_define-color: backdrop_fg_color mix ($ambiance_bg_color, $ambiance_fg_color, 0.8);
+$ambiance_define-color: backdrop_text_color mix ($ambiance_base_color, $ambiance_text_color, 0.8);
+$ambiance_define-color: backdrop_dark_fg_color mix ($ambiance_dark_bg_color, $ambiance_dark_fg_color, 0.75);
+/*$ambiance_define-color backdrop_dark_bg_color mix ($ambiance_dark_bg_color, $ambiance_dark_fg_color, 0.75);*/
+$ambiance_define-color: backdrop_selected_bg_color shade ($ambiance_bg_color, 0.92);
+$ambiance_define-color: backdrop_selected_fg_color $ambiance_fg_color;
+$ambiance_define-color: backdrop_filling_bg #b0b0b0;
+
+$ambiance_define-color: focus_color alpha ($ambiance_selected_bg_color, 0.5);
+$ambiance_define-color: focus_bg_color alpha ($ambiance_selected_bg_color, 0.1);
+
+$ambiance_define-color: scale_highlight_bg #df784e;
+
+$ambiance_define-color: osd_fg_color #eeeeec;
+$ambiance_define-color: osd_bg_color alpha(#202526, 0.7);
+$ambiance_define-color: osd_border_color alpha(black, 0.7);
+
+$ambiance_define-color: scrollbar_track_color mix($ambiance_base_color, black, 0.1); /* #e6e6e6 */
+
+$ambiance_define-color: progressbar_fill_a shade($theme_selected_bg_color, 1.07);
+$ambiance_define-color: progressbar_fill_b shade(mix($theme_selected_bg_color, $ambiance_selected_bg_color, 0.10), 0.91);
+$ambiance_define-color: button_border_active shade($theme_selected_bg_color, 0.95);
+$ambiance_define-color: progressbar_backdrop_fill_a shade($ambiance_backdrop_selected_bg_color, 1.07);
+$ambiance_define-color: progressbar_backdrop_fill_b shade(mix($ambiance_backdrop_selected_bg_color, grey, 0.10), 0.91);
+$ambiance_define-color: button_border_backdrop_active shade($ambiance_backdrop_selected_bg_color, 0.95);
+$ambiance_define-color: panel_lighter_color shade ($ambiance_dark_bg_color, 1.4);
+$ambiance_define-color: panel_darker_color shade ($ambiance_dark_bg_color, 0.96);
+$ambiance_define-color: maximized_header_color shade ($ambiance_dark_bg_color, 1.3);
+
+$ambiance_define-color: suggested_action_bg #38b44a;
+
