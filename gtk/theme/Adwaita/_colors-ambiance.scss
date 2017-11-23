@@ -1,61 +1,61 @@
 /*default color scheme */
-$ambiance_bg_color         : #f2f1f0;
-$ambiance_fg_color         : #4c4c4c;
-$ambiance_base_color       : #ffffff;
-$ambiance_text_color       : #3C3C3C;
-$ambiance_selected_bg_color: #f07746;
-$ambiance_selected_fg_color: #ffffff;
-$ambiance_tooltip_bg_color : #000000;
-$ambiance_tooltip_fg_color : #ffffff;
+$amb_bg_color         : #f2f1f0;
+$amb_fg_color         : #4c4c4c;
+$amb_base_color       : #ffffff;
+$amb_text_color       : #3C3C3C;
+$amb_selected_bg_color: #f07746;
+$amb_selected_fg_color: #ffffff;
+$amb_tooltip_bg_color : #000000;
+$amb_tooltip_fg_color : #ffffff;
 
-$ambiance_active_shadow_color: black;
-$ambiance_inactive_shadow_color: transparentize($ambiance_active_shadow_color, 0.30);
+$amb_active_shadow_color  : black;
+$amb_inactive_shadow_color: transparentize($amb_active_shadow_color, 0.30);
 
 /** GTK NAMED COLORS: these might be reused by apps, keep in sync with Adwaita **/
 /* widget text/foreground color */
-$ambiance_theme_fg_color: $ambiance_fg_color;
+$amb_theme_fg_color: $amb_fg_color;
 /* text color for entries, views and content in general */
-$ambiance_theme_text_color: $ambiance_fg_color;
+$amb_theme_text_color: $amb_fg_color;
 /* widget base background color */
-$ambiance_theme_bg_color: $ambiance_bg_color;
+$amb_theme_bg_color: $amb_bg_color;
 /* text widgets and the like base background color */
-$ambiance_theme_base_color: $ambiance_base_color;
+$amb_theme_base_color: $amb_base_color;
 /* base background color of selections */
-$ambiance_theme_selected_bg_color: $ambiance_selected_bg_color;
+$amb_theme_selected_bg_color: $amb_selected_bg_color;
 /* text/foreground color of selections */
-$ambiance_theme_selected_fg_color: $ambiance_selected_fg_color;
+$amb_theme_selected_fg_color: $amb_selected_fg_color;
 /* base background color of insensitive widgets */
-$ambiance_insensitive_bg_color: shade($ambiance_bg_color, 95%);
+$amb_insensitive_bg_color: shade($amb_bg_color, 95%);
 /* text foreground color of insensitive widgets */
-$ambiance_insensitive_fg_color: shade($ambiance_bg_color, 60%);
+$amb_insensitive_fg_color: shade($amb_bg_color, 60%);
 /* insensitive text widgets and the like base background color */
-$ambiance_insensitive_base_color: $ambiance_theme_base_color;
+$amb_insensitive_base_color: $amb_theme_base_color;
 /* widget text/foreground color on backdrop windows */
-$ambiance_backdrop_fg_color: mix ($ambiance_bg_color, $ambiance_fg_color, 0.8);
-$ambiance_theme_unfocused_fg_color: $ambiance_backdrop_fg_color;
+$amb_backdrop_fg_color       : mix ($amb_bg_color, $amb_fg_color, 0.8);
+$amb_theme_unfocused_fg_color: $amb_backdrop_fg_color;
 /* text color for entries, views and content in general on backdrop windows */
-$ambiance_backdrop_text_color: mix ($ambiance_base_color, $ambiance_text_color, 0.8);
-$ambiance_theme_unfocused_text_color: $ambiance_backdrop_text_color;
+$amb_backdrop_text_color       : mix ($amb_base_color, $amb_text_color, 0.8);
+$amb_theme_unfocused_text_color: $amb_backdrop_text_color;
 /* widget base background color on backdrop windows */
-$ambiance_theme_unfocused_bg_color: $ambiance_theme_bg_color;
+$amb_theme_unfocused_bg_color: $amb_theme_bg_color;
 /* text widgets and the like base background color on backdrop windows */
-$ambiance_theme_unfocused_base_color: $ambiance_theme_base_color;
+$amb_theme_unfocused_base_color: $amb_theme_base_color;
 /* base background color of selections on backdrop windows */
-$ambiance_backdrop_selected_bg_color: $ambiance_bg_color;
-$ambiance_theme_unfocused_selected_bg_color: $ambiance_backdrop_selected_bg_color;
+$amb_backdrop_selected_bg_color       : $amb_bg_color;
+$amb_theme_unfocused_selected_bg_color: $amb_backdrop_selected_bg_color;
 /* text/foreground color of selections on backdrop windows */
-$ambiance_backdrop_selected_fg_color: $ambiance_fg_color;
-$ambiance_theme_unfocused_selected_fg_color: $ambiance_backdrop_selected_fg_color;
+$amb_backdrop_selected_fg_color       : $amb_fg_color;
+$amb_theme_unfocused_selected_fg_color: $amb_backdrop_selected_fg_color;
 /* insensitive color on backdrop windows*/
-$ambiance_unfocused_insensitive_color: $ambiance_insensitive_fg_color;
+$amb_unfocused_insensitive_color: $amb_insensitive_fg_color;
 /* widgets main borders color */
-$ambiance_borders: shade($ambiance_bg_color, 82%);
+$amb_borders: shade($amb_bg_color, 82%);
 /* widgets main borders color on backdrop windows */
-$ambiance_unfocused_borders: $ambiance_borders;
+$amb_unfocused_borders: $amb_borders;
 /* these are pretty self explanatory */
-$ambiance_warning_color: #eca918;
-$ambiance_error_color: #df382c;
-$ambiance_success_color: #38b44a;
+$amb_warning_color: #eca918;
+$amb_error_color  : #df382c;
+$amb_success_color: #38b44a;
 
 /** Default theme colors definition end **/
 
@@ -66,48 +66,46 @@ $ambiance_success_color: #38b44a;
  * the name of the variable. Please remember to change values there as well
  * when changing one of the variables below.
  */
-$ambiance_info_fg_color: rgb (181, 171, 156);
-$ambiance_info_bg_color: rgb (252, 252, 189);
-$ambiance_warning_fg_color: rgb (173, 120, 41);
-$ambiance_warning_bg_color: rgb (250, 173, 61);
-$ambiance_question_fg_color: rgb (97, 122, 214);
-$ambiance_question_bg_color: rgb (138, 173, 212);
-$ambiance_error_fg_color: rgb (235, 235, 235);
-$ambiance_error_bg_color: rgb (223, 56, 44);
-$ambiance_link_color: $ambiance_selected_bg_color;
+$amb_info_fg_color                : rgb(181, 171, 156);
+$amb_info_bg_color                : rgb(252, 252, 189);
+$amb_warning_fg_color             : rgb(173, 120, 41);
+$amb_warning_bg_color             : rgb(250, 173, 61);
+$amb_question_fg_color            : rgb(97, 122, 214);
+$amb_question_bg_color            : rgb(138, 173, 212);
+$amb_error_fg_color               : rgb(235, 235, 235);
+$amb_error_bg_color               : rgb(223, 56, 44);
+$amb_link_color                   : $amb_selected_bg_color;
 
-/* theme common colors */
-$ambiance_button_text_shadow: transparentize(white, 0.40);
-$ambiance_button_bg_color: shade ($ambiance_bg_color, 102%); /*shade (#cdcdcd, 1.08);*/
-$ambiance_notebook_button_bg_color: shade ($ambiance_bg_color, 102%);
-$ambiance_button_insensitive_bg_color: mix ($ambiance_button_bg_color, $ambiance_bg_color, 0.6);
-$ambiance_dark_bg_color: #3c3b37;
-$ambiance_dark_fg_color: #dfdbd2;
+$amb_button_text_shadow           : transparentize(white, 0.40);
+$amb_button_bg_color              : shade ($amb_bg_color, 102%); /*shade (#cdcdcd, 1.08);*/
+$amb_notebook_button_bg_color     : shade ($amb_bg_color, 102%);
+$amb_button_insensitive_bg_color  : mix ($amb_button_bg_color, $amb_bg_color, 0.6);
+$amb_dark_bg_color                : #3c3b37;
+$amb_dark_fg_color                : #dfdbd2;
 
-$ambiance_backdrop_dark_fg_color: mix ($ambiance_dark_bg_color, $ambiance_dark_fg_color, 0.75);
-/*$ambiance_define-color backdrop_dark_bg_color mix ($ambiance_dark_bg_color, $ambiance_dark_fg_color, 0.75);*/
-$ambiance_backdrop_filling_bg: #b0b0b0;
+$amb_backdrop_dark_fg_color       : mix ($amb_dark_bg_color, $amb_dark_fg_color, 0.75);
+$amb_backdrop_filling_bg          : #b0b0b0;
 
-$ambiance_focus_color: transparentize ($ambiance_selected_bg_color, 0.50);
-$ambiance_focus_bg_color: transparentize ($ambiance_selected_bg_color, 0.10);
+$amb_focus_color                  : transparentize ($amb_selected_bg_color, 0.50);
+$amb_focus_bg_color               : transparentize ($amb_selected_bg_color, 0.10);
 
-$ambiance_scale_highlight_bg: #df784e;
+$amb_scale_highlight_bg           : #df784e;
 
-$ambiance_osd_fg_color: #eeeeec;
-$ambiance_osd_bg_color: transparentize(#202526, 0.70);
-$ambiance_osd_border_color: transparentize(black, 0.70);
+$amb_osd_fg_color                 : #eeeeec;
+$amb_osd_bg_color                 : transparentize(#202526, 0.70);
+$amb_osd_border_color             : transparentize(black, 0.70);
 
-$ambiance_scrollbar_track_color: mix($ambiance_base_color, black, 0.1); /* #e6e6e6 */
+$amb_scrollbar_track_color        : mix($amb_base_color, black, 0.1); /* #e6e6e6 */
 
-$ambiance_progressbar_fill_a: shade($ambiance_theme_selected_bg_color, 1.07);
-$ambiance_progressbar_fill_b: shade(mix($ambiance_theme_selected_bg_color, $ambiance_selected_bg_color, 0.10), 0.91);
-$ambiance_button_border_active: shade($ambiance_theme_selected_bg_color, 0.95);
-$ambiance_progressbar_backdrop_fill_a: shade($ambiance_backdrop_selected_bg_color, 1.07);
-$ambiance_progressbar_backdrop_fill_b: shade(mix($ambiance_backdrop_selected_bg_color, grey, 0.10), 0.91);
-$ambiance_button_border_backdrop_active: shade($ambiance_backdrop_selected_bg_color, 0.95);
-$ambiance_panel_lighter_color: shade ($ambiance_dark_bg_color, 1.4);
-$ambiance_panel_darker_color: shade ($ambiance_dark_bg_color, 0.96);
-$ambiance_maximized_header_color: shade ($ambiance_dark_bg_color, 1.3);
+$amb_progressbar_fill_a           : shade($amb_theme_selected_bg_color, 1.07);
+$amb_progressbar_fill_b           : shade(mix($amb_theme_selected_bg_color, $amb_selected_bg_color, 0.10), 0.91);
+$amb_button_border_active         : shade($amb_theme_selected_bg_color, 0.95);
+$amb_progressbar_backdrop_fill_a  : shade($amb_backdrop_selected_bg_color, 1.07);
+$amb_progressbar_backdrop_fill_b  : shade(mix($amb_backdrop_selected_bg_color, grey, 0.10), 0.91);
+$amb_button_border_backdrop_active: shade($amb_backdrop_selected_bg_color, 0.95);
+$amb_panel_lighter_color          : shade ($amb_dark_bg_color, 1.4);
+$amb_panel_darker_color           : shade ($amb_dark_bg_color, 0.96);
+$amb_maximized_header_color       : shade ($amb_dark_bg_color, 1.3);
 
-$ambiance_suggested_action_bg: #38b44a;
+$amb_suggested_action_bg          : #38b44a;
 
